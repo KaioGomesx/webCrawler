@@ -1,28 +1,31 @@
 var Algorithmia = require("algorithmia");
-const apiToken = "simtfw6iJqtKENkzXPFXB89YN3d1"
+const apiToken = "your algorithmia api key" //vá ao site do algorithmia pra pegar sua api key
 
 main()
 
 function main(){
+	try{
+		if (process.argv.length > 4) {
 
-	if (process.argv.length > 4) {
-
-		console.log("[*]opção inválida, por favor execute o script com o parametro help: node webCrawler.js -h")
-	
-	} else if (process.argv[2] == '-h') {
-		if (process.argv.length > 3){
 			console.log("[*]opção inválida, por favor execute o script com o parametro help: node webCrawler.js -h")
-			return;
-		}
+	
+		} else if (process.argv[2] == '-h') {
+			if (process.argv.length > 3){
+				console.log("[*]opção inválida, por favor execute o script com o parametro help: node webCrawler.js -h")
+				return;
+			}
 		
-		help()
+			help()
 
-	} else if(process.argv[2] == '-site') {
+		} else if(process.argv[2] == '-site') {
 
-		crawler()
+			crawler()
 
-	} else {
-		console.log("[*]opção inválida, por favor execute o script com o parametro help: node webCrawler.js -h")
+		} else {
+			console.log("[*]opção inválida, por favor execute o script com o parametro help: node webCrawler.js -h")
+		}
+	} catch(Exception) {
+		console.log(`Erro inesperado.\nErro: ${Exception}`);
 	}
 }
 
