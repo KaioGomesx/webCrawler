@@ -1,14 +1,11 @@
 # webCrawler
 
-somente uma dependencia: Algorithmia.
+instalar as dependencias(1)
 
-instalando o algorithmia(tenha o npm)
-
-$ npm install --save algorithmia
+$ npm install
 
 
 **Modo de uso**
-**NodeJS**
 
 Mostrar o help
 
